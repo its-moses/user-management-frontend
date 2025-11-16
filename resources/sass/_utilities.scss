@@ -1,0 +1,74 @@
+.shadow-custom {
+  box-shadow: $shadow;
+}
+
+.shadow-custom-md {
+  box-shadow: $shadow-md;
+}
+
+.shadow-custom-lg {
+  box-shadow: $shadow-lg;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &.icon-btn-primary {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: $primary-color;
+
+    &:hover {
+      background-color: rgba(99, 102, 241, 0.2);
+    }
+  }
+
+  &.icon-btn-danger {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+
+    &:hover {
+      background-color: rgba(239, 68, 68, 0.2);
+    }
+  }
+
+  &.icon-btn-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+
+    &:hover {
+      background-color: rgba(16, 185, 129, 0.2);
+    }
+  }
+}

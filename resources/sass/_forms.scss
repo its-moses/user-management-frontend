@@ -1,0 +1,46 @@
+.form-control,
+.form-select {
+  border-radius: $border-radius;
+  border: 1px solid #d1d5db;
+  padding: 0.625rem 1rem;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+  background-color: white;
+
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #9ca3af;
+  }
+}
+
+.form-label {
+  font-weight: 500;
+  color: $text-primary;
+  margin-bottom: 0.5rem;
+  font-size: 0.9375rem;
+}
+
+.form-floating {
+  .form-control,
+  .form-select {
+    height: calc(3.5rem + 2px);
+    padding: 1rem 1rem;
+  }
+
+  label {
+    padding: 1rem 1rem;
+    color: #6b7280;
+  }
+
+  .form-control:focus ~ label,
+  .form-control:not(:placeholder-shown) ~ label,
+  .form-select ~ label {
+    color: $primary-color;
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+  }
+}

@@ -1,0 +1,44 @@
+.navbar-custom {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.98) 100%);
+  backdrop-filter: blur(10px);
+  box-shadow: $shadow;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+  padding: 1rem 0;
+
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nav-link {
+    color: $text-primary;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: $border-radius-sm;
+    transition: all 0.2s ease;
+    margin: 0 0.25rem;
+
+    &:hover {
+      background-color: rgba(99, 102, 241, 0.08);
+      color: $primary-color;
+    }
+
+    &.active {
+      background-color: rgba(99, 102, 241, 0.12);
+      color: $primary-color;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

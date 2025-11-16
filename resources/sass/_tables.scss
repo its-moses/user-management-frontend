@@ -1,0 +1,43 @@
+.table {
+  color: $text-primary;
+
+  thead {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(79, 70, 229, 0.08) 100%);
+    
+    th {
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: $text-primary;
+      border-bottom: 2px solid rgba(99, 102, 241, 0.2);
+      padding: 1rem 0.75rem;
+    }
+  }
+
+  tbody {
+    tr {
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: rgba(99, 102, 241, 0.03);
+        transform: scale(1.01);
+      }
+
+      td {
+        padding: 1rem 0.75rem;
+        vertical-align: middle;
+        border-bottom: 1px solid #e5e7eb;
+      }
+    }
+  }
+
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(249, 250, 251, 0.5);
+  }
+}
+
+.table-responsive {
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-sm;
+}

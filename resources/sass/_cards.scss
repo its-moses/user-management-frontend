@@ -1,0 +1,28 @@
+.card {
+  border-radius: $border-radius-lg;
+  border: none;
+  box-shadow: $shadow;
+  transition: all 0.3s ease;
+  background: white;
+
+  &:hover {
+    box-shadow: $shadow-md;
+  }
+
+  // Default soft header
+  .card-header {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(79, 70, 229, 0.05) 100%);
+    border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+    padding: 1.25rem 1.5rem;
+    font-weight: 600;
+    color: $text-primary;
+    border-radius: $border-radius-lg $border-radius-lg 0 0;
+  }
+
+  // If Bootstrap color class is present → don't override
+  .card-header[class*="bg-"] {
+    background: unset !important;
+    color: unset !important;
+    border-bottom: unset !important;
+  }
+}
